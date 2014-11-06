@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Commentator</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<div class="container-full">
+
+      <div class="row">
+       
+        <div class="col-lg-12 text-center v-center">
+          
+          <h1>Commentator</h1>
+          <p class="lead">You are the best judge!</p>
+          
+          <br><br><br>
+          
+          <form class="col-lg-12">
+            <div class="input-group form-alignment" >
+            <input class="form-control input-lg" title="Click here for searching Random Comments" placeholder="Search Comments" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-lg btn-primary" type="button">OK</button>
+            </span>
+            </div>
+          </form>
+            <br>
+              <center>Or Make an Advanced Search</center>
+            <br>
+
+          <form method= 'post' action= '/photo_results' class="form-inline" role="form">
+            <div class="form-group input-group form-alignment" >
+            <table class = "table">
+              <tr ><td><input class="form-control input-lg" title="Search for comments from this Commentator" placeholder="Enter Commentator's name" type="text"></td></tr>
+              <tr ><td><input class="form-control input-lg" title="Search for comments on a specific Article" placeholder="Enter Article Name" type="text"></td></tr>
+              <tr ><td><input id="datepicker1" type="text" class="form-control input-lg" title="Search for comments on a specific Article" placeholder="Enter Date"> </td></tr>
+              <tr><td><button type="submit" class="btn btn-theme">search</button></td></tr>
+            </table>
+            </div>
+           
+          </form> 
+          <!-- <form class="col-lg-12">
+            <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
+            <input class="form-control input-lg" title="Search for comments from this Commentator" placeholder="Enter Commentator's name" type="text">
+            <input class="form-control input-lg" title="Search for comments on a specific Article" placeholder="Enter Article Name" type="text">
+            <input class="form-control input-lg" title="Search for comments from a particular Date" placeholder="Enter Date" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-lg btn-primary" type="button">OK</button>
+            </span>
+            </div>
+          </form> -->
+        </div>
+        
+      </div> <!-- /row -->
+  
+  	  <div class="row">
+       
+        <div class="col-lg-12 text-center v-center" style="font-size:39pt;">
+          <a href="#"><i class="icon-google-plus"></i></a> <a href="#"><i class="icon-facebook"></i></a>  <a href="#"><i class="icon-twitter"></i></a> <a href="#"><i class="icon-github"></i></a> <a href="#"><i class="icon-pinterest"></i></a>
+        </div>
+      
+      </div>
+  
+  	<br><br><br><br><br>
+
+</div> <!-- /container full -->
+
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $(function() {
+        $( "#datepicker1" ).datepicker();
+      });
+      $(function() {
+        $( "#datepicker2" ).datepicker();
+      });
+    </script>
+	</body>
+</html>
+
