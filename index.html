@@ -1,79 +1,81 @@
 <!DOCTYPE html>
-
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/img/favicon.png">
+   <!--  <link rel="shortcut icon" href="assets/img/favicon.png"> -->
 
-    <title>Commentator</title>
+    <title>Siimple - Free Bootstrap 3 Landing Page</title>
 
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-  <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
 
-    <link href="assets/css/style.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-   <link rel="stylesheet" href="/resources/demos/style.css">
+    <!-- siimple style -->
+    <link href="css/style.css" rel="stylesheet">
     
-  <style type="text/css"></style></head>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-  <body class ="custom-body">
+  <body>
 
     <!-- Fixed navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">imFlickr</a>
+          <a class="navbar-brand" href="index.html">Siimple</a>
         </div>
-        
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Sign up</a></li>
+      <li><a href="#">Sign in</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
 
-  <div id="header" class="custom-header">
+  <div id="header" class = "custom-header">
     <div class="container">
-    <h1>imFlickr</h1>
       <div class="row">
-        <div class="col-lg-6 form-ui">
-          
-          <h2 class="subtitle">The improved flickr</h2>
-          <h2 class="subtitle2" id= "input_validity"> </h2>
-          <form method= 'post' action= '/photo_results' class="form-inline" role="form">
+        <div class="col-lg-6">
+          <h1>Simple landing page</h1>
+          <h2 class="subtitle">No need huge slogan, we believe in less is better</h2>
+          <form class="form-inline signup" role="form">
             <div class="form-group">
-            <table class = "table">
-              <tr ><td><input type="text" class="form-control" name="search_query" placeholder="Enter Search"></td></tr>
-              <tr ><td><input type="text" class="form-control" name="user_name" placeholder="Enter to Username"></td></tr>
-              <tr ><td><input id="datepicker1" type="text" class="form-control" name="min_upload_date" placeholder="Uploaded since"> </td></tr>
-              <tr ><td><input id="datepicker2" type="text" class="form-control" name="max_upload_date" placeholder="Uploaded until"></td></tr>
-              <tr><td><button type="submit" class="btn btn-theme">search</button></td></tr>
-            </table>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
             </div>
-           
+            <button type="submit" class="btn btn-theme">Get it now</button>
           </form>         
         </div>
         <div class="col-lg-4 col-lg-offset-2">
           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
             </ol>         
             <!-- slides -->
-            <div class="carousel-inner slide-img">
+            <div class="carousel-inner">
             <div class="item active">
-              <img class ="image-slide-css" src="images/photo1.jpg" alt="">
+              <img src="images/photo1.jpg" alt="">
             </div>
             <div class="item">
-              <img class ="image-slide-css" src="images/photo4.jpg" alt="">
+              <img src="images/photo3.jpg" alt="">
             </div>
             <div class="item">
-              <img class ="image-slide-css" src="images/photo3.jpg" alt="">
+              <img src="images/photo4.jpg" alt="">
             </div>
             </div>
           </div>    
@@ -86,57 +88,13 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-lg-offset-3">
-          <p class="copyright">Copyright &copy; 2014 -Shrutika</p>
+          <p class="copyright">Copyright &copy; 2014 - Bootstraptaste.com</p>
       </div>
     </div>    
   </div>  
   </div>
 
-    <script src="bootstrap/js/jquery-1.10.2.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-  
-
-<div class="pnt-on-image-wrapper" style="display: none;"><div class="pnt-on-image"><div class="pnticn pnticn-logo pnticnlarge"></div><div class="pnt-onimg-text">Point</div></div></div></body></html>
-<script>
-  $(function() {
-    $( "#datepicker1" ).datepicker();
-  });
-  $(function() {
-    $( "#datepicker2" ).datepicker();
-  });
-</script>
-<script type="text/javascript">
-
-  var check_url_validity = window.location.search.substring(1);
-
-  if(check_url_validity == "no_results")
-  {
-    $(document).ready(function(){
-      $("#input_validity").text("NO RESULTS OBTAINED! TRY AGAIN");
-    });
-  }
-  else if(check_url_validity == "invalid_username")
-  {
-    $(document).ready(function(){
-      $("#input_validity").text("INVALID USERNAME");
-    });
-  }
-  else if(check_url_validity == "invalid_inputs")
-  {
-    $(document).ready(function(){
-      $("#input_validity").text("INVALID INPUTS");
-    });
-  }
-  else if(check_url_validity == "no_fields_entered")
-  {
-    $(document).ready(function(){
-      $("#input_validity").text("ENTER REQUIRED FIELDS!");
-    }); 
-  }
-  else
-  {
-    $(document).ready(function(){
-      $("#input_validity").hide();
-    });
-  }
-</script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
