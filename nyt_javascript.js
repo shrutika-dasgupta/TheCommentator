@@ -15,8 +15,10 @@ function get_random_comments()
   $.ajax({
     'url': 'http://api.nytimes.com/svc/community/v2/comments/random',
     'data':parameterList,
-    'dataType': 'json',
+    'dataType': 'jsonp',
+    'jsonpCallback' : 'cb',
     'cache':true,
+    'method':'GET',
     'success': function(response, textStats, XMLHttpRequest) {
       console.log(response);
     }
