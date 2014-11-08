@@ -2,7 +2,6 @@ function get_form_data(commentator_name, article_name)
 {
   console.log(commentator_name);
   console.log(article_name);
-
 }
 
 parameterList = {
@@ -13,14 +12,17 @@ function get_random_comments()
 {
   console.log("random button clicked");
   $.ajax({
-    'url': 'http://api.nytimes.com/svc/community/v2/comments/random',
-    'data':parameterList,
-    'dataType': 'jsonp',
-    'jsonpCallback' : 'cb',
-    'cache':true,
-    'method':'GET',
-    'success': function(response, textStats, XMLHttpRequest) {
-      console.log(response);
+    url: 'http://api.nytimes.com/svc/community/v2/comments/random.json',
+    data: parameterList,
+    dataType: 'jsonp',
+    complete : function(){
+      console.log("complete");
+    },
+    success: function(){
+      console.log("success");
+    },
+    error: function(){
+      console.log("error");
     }
   });
 }
