@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-   <!--  <link rel="shortcut icon" href="assets/img/favicon.png"> -->
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+ <!--  <link rel="shortcut icon" href="assets/img/favicon.png"> -->
 
-    <title>Commentator</title>
+  <title>Commentator</title>
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
-    <link href="css/style.css" rel="stylesheet">
-
-    
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
   
-    
-  <style type="text/css"></style></head>
+  <style type="text/css"></style>
+</head>
 
-  <body class ="custom-body">
+    <body class ="custom-body">
 
   <!-- Doubtful links: http://eternicode.github.io/bootstrap-datepicker/?markup=embedded&format=&weekStart=&startDate=&endDate=&startView=0&minViewMode=0&todayBtn=false&language=en&orientation=auto&multidate=&multidateSeparator=&keyboardNavigation=on&forceParse=on#sandbox -->
 
@@ -53,7 +52,7 @@
                 <tr ><td><input id= "commentator-name" type="text" class="form-control input-lg" name="commentator_name" placeholder="Commentator's name" title="Enter the Name of the Commentor to retrieve comments"></td></tr>
                 <tr ><td><input id ="article-name" type="text" class="form-control input-lg" name="article_name" placeholder="Article" title="Enter the Article to search for"></td></tr>
                 <tr ><td>
-                  <div class="input-group date">
+                  <div class="input-group date custom-datepicker">
                     <input id="datepicker1" type="text" class="form-control input-lg" title="Pick a date for which comments are to be displayed">
                     <span class="input-group-addon">
                       <i class="glyphicon glyphicon-th"></i>
@@ -80,6 +79,7 @@
 
     <script src="js/jquery-1.11.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src= "nyt_javascript.js"></script>
   
 
 <div class="pnt-on-image-wrapper" style="display: none;"><div class="pnt-on-image"><div class="pnticn pnticn-logo pnticnlarge"></div><div class="pnt-onimg-text">Point</div></div></div></body></html>
@@ -91,74 +91,3 @@
   $( "#datepicker2" ).datepicker();
 
 </script>-->
-<script type="text/javascript">
-
-
-function get_form_data(commentator_name, article_name)
-{
-  console.log(commentator_name);
-  console.log(article_name);
-
-}
-
-function get_random_comments()
-{
-  console.log("random button clicked");
-  var json_random_comments = $.ajax({
-    url: 'http://api.nytimes.com/svc/community/v2/comments/random?api-key=71b688b6fcaffe9ac59413b1d7de1a0c:1:70151851',
-    type: 'GET',
-    dataType: 'jsonp',
-    contentType:"application/json",
-    async: false,
-    success: function(response) {
-      console.log(response.val);
-    }
-  });
-  console.log(json_random_comments);
-}
-
-$(document).ready(function(){
-  $("#search-random").click(function(){
-    get_random_comments();
-  });
-});
-
-$(document).ready(function(){
-  $("#search-query").click(function(){
-    get_form_data($('#commentator-name').val(), $('#article-name').val())
-  })
-})
-
-/*  var check_url_validity = window.location.search.substring(1);
-
-  if(check_url_validity == "no_results")
-  {
-    $(document).ready(function(){
-      $("#input_validity").text("NO RESULTS OBTAINED! TRY AGAIN");
-    });
-  }
-  else if(check_url_validity == "invalid_username")
-  {
-    $(document).ready(function(){
-      $("#input_validity").text("INVALID USERNAME");
-    });
-  }
-  else if(check_url_validity == "invalid_inputs")
-  {
-    $(document).ready(function(){
-      $("#input_validity").text("INVALID INPUTS");
-    });
-  }
-  else if(check_url_validity == "no_fields_entered")
-  {
-    $(document).ready(function(){
-      $("#input_validity").text("ENTER REQUIRED FIELDS!");
-    }); 
-  }
-  else
-  {
-    $(document).ready(function(){
-      $("#input_validity").hide();
-    });
-  }
-*/</script>

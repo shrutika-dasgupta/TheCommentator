@@ -245,3 +245,8 @@ p.copyright {
 .col-lg-6 .form-ui{
   margin-top: : 40px;
 }
+
+.custom-datepicker
+{
+  width :20%;
+}
