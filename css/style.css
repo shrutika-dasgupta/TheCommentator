@@ -114,12 +114,13 @@ a.navbar-brand:hover {
 
 #header {	
 	background-color: #444;
-	margin-top: -20px;
+	margin-top: -105px;
 	padding-top: 150px;
 	background-attachment: relative;
 	background-position: center center;
 	min-height: 650px;
 	width: 100%;
+  overflow-y: hidden; 
 	
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -205,6 +206,8 @@ p.copyright {
   background: url(../images/NewYork.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow-y: hidden;
+  margin-top: -105px; 
   z-index : -2;
 }
 
