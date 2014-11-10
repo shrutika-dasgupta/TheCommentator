@@ -253,3 +253,13 @@ p.copyright {
 {
   width :20%;
 }
+
+#my_comments_box{
+  background: #D3D3D3;
+  width: 500px;
+  height: 1000px;
+  display: none; 
+  border:  black;
+  vertical-align: text-bottom; 
+  position: relative;
+}

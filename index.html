@@ -13,7 +13,10 @@
 
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href='css/corgi.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/elusive-webfont.css">
   <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/corgi.js" type="text/javascript"></script>
   <script type="text/javascript" src= "nyt_javascript.js"></script>
 </head>
 
@@ -55,11 +58,63 @@
                     </span>
                   </div>
                 </td></tr>
-                <tr><td><button id="search-query" type="submit" class="btn btn-lg btn-theme" title="Click on search to fire through the web!" onclick="">search</button></td></tr>
+                <tr><td><button id="search-query" type="button" class="btn btn-lg btn-theme" title="Click on search to fire through the web!" onclick="">search</button></td></tr>
               </table>
             </div>
           </form>         
         </div> 
+      </div>
+      <div class="row">
+        <div id= "my_comments_box" class= "comment-box">
+          <div id = "all-comments" >
+              <div class="corgi_feed_well">
+                <div class="individual_feed_item">
+                  <div class="feed_item">
+                    <div class="feed_body">
+                      <div class="row">
+                        <div class="feed_profile_pic">
+                          <img src="img/boxer.jpg" alt="meta image" class="meta_image" />
+                        </div>
+                        <div class="feed_text">
+                          <p>Click on the comment link in the lower right. It has a hidden dropdown comment area built in. Woof!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment_area">
+                      <p>Add a comment</p>
+                      <form>
+                        <textarea rows="3" class="span6"></textarea><br/>
+                        <input type="submit" class="btn" />
+                      </form>
+                    </div>
+                    <hr class="feed_hr" />
+                    <div class="bottom_meta">
+                      <div class="row">
+                        <div class="bottom_left">
+                          <div class="share_wrapper">
+                            <div class="share"><a href="#" class="share_button"><i class="icon-heart"></i></a></div>
+                            <div class="share_hidden">
+                              <ul class="hover_heart">
+                                <span class="internal_heart"><i class="icon-heart"></i> Share This Post</span> 
+                                <div class="social_links">
+                                  <li><span><i class="icon-twitter"></i> Twitter</span></li>
+                                  <li><span><i class="icon-facebook"></i> Facebook</span></li>
+                                  <li><span><i class="icon-pinterest"></i> Pinterest</span></li>
+                                </div>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="bottom_right">
+                          <a href="#">Sir_woofs_alot</a> <span>|</span> <a href="#" class="show_comment_link">comment</a> <span>|</span> 2 days ago
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
