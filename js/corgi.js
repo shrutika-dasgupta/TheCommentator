@@ -1,7 +1,8 @@
 jQuery(document).ready(function() {
-	$(".show_comment_link").click(function(e){
+	$(".show_comment_link").unbind('click').click(function(e){
+		console.log(e);
 		e.preventDefault();
-		$(this).closest('.feed_item').find('.comment_area').slideToggle(400);
+		$(this).closest('.feed_item').find('.comment_area').slideToggle(700);
 	});
 	$(".share_wrapper").hover(
 		function() {

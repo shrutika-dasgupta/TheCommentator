@@ -263,3 +263,48 @@ p.copyright {
   vertical-align: text-bottom; 
   position: relative;
 }
+
+#wrap-section{
+  width: 100%;
+
+}
+
+#stat-wrap-section{
+  width: 100%;
+
+}
+
+.left-sec-stat{
+  width: 500px;
+  overflow: hidden;
+  position: fixed;
+}
+
+.right-sec-stat{
+  width: 800px;
+  margin-top: 20px;
+  margin-right: 100px;
+  overflow-x: hidden; 
+  overflow-y: auto;
+}
+
+.left-container{
+  width: 500px;
+  overflow: hidden;
+  position: fixed;
+}
+
+.right-container{
+  width: 800px;
+  margin-top: 20px;
+  margin-right: 100px;
+  overflow-x: hidden; 
+  overflow-y: auto;
+}
+
+
+
+.comment_area > .text_box_comments p{
+  font-weight: bold;
+  color: '000000';
+}

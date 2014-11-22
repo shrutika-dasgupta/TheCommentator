@@ -3,7 +3,7 @@
 	Author: Damian Sowers
 */
 body {
-	background: url("../img/billie_holiday.png") repeat;
+	background: url("../images/billie_holiday.png") repeat;
 }
 .navbar-inner {
 	padding-top:10px;
@@ -141,7 +141,7 @@ body {
 	display:none;
 	padding:20px;
 	background-color:#111;
-	background: url("../img/wild_oliva.png") repeat;
+	background: url("../images/white-wall.jpg") repeat;
 }
 .feed_hr {
 	margin-top:0;
@@ -149,7 +149,7 @@ body {
 	padding-top:0;
 }
 .comment_area p {
-	color:#fff;
+	color:#000000;
 	text-shadow: 0 1px 0 #000;
 }
 .sidebar_header {
