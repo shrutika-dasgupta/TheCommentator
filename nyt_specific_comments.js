@@ -94,7 +94,7 @@ function get_form_data(indicate, input_value)
         else
         {
           $.ajax({
-            url: ('http://api.nytimes.com/svc/community/v2/comments/by-date/'+date_str+'.jsonp?api-key=71b688b6fcaffe9ac59413b1d7de1a0c:1:70151851'),
+            url: ('http://api.nytimes.com/svc/community/v2/comments/by-date/'+date_str+'.jsonp?api-key=#'),
             dataType: 'jsonp',
             type: 'GET',
             cache:false,
@@ -257,7 +257,7 @@ function get_form_data(indicate, input_value)
                   console.log(userId);
                   $.ajax({
                     type:'GET',
-                    url: 'http://api.nytimes.com/svc/community/v2/comments/user/id/'+userId+'.jsonp?api-key=71b688b6fcaffe9ac59413b1d7de1a0c:1:70151851',
+                    url: 'http://api.nytimes.com/svc/community/v2/comments/user/id/'+userId+'.jsonp?api-key=#',
                     cache: false,
                     async: false,
                     dataType: 'jsonp',
@@ -265,13 +265,26 @@ function get_form_data(indicate, input_value)
                       var objects = data.results.comments;
                       for (var j = 0; j < objects.length; j++){
                         var user_comments = objects[j]['commentBody'];
+                        var user_name = objects[j]['display_name'];
+                        var user_location = objects[j]['location'];
+                        var u_dateTime = new Date(objects[j]['approveDate']*1000);
+                        var u_day = u_dateTime.getDate();
+                        var u_month = u_dateTime.getMonth();
+                        var u_year = u_dateTime.getFullYear();
+
+                        var user_date = u_month+"/"+u_day+"/"+u_year;
 
                         var div_other_comm = document.createElement("div");
-                        div_other_comm.id = "div_other_comments/"+i+"/"+j;
+                        div_other_comm.id = "div_other_comments/"+userId+"/"+j;
                         div_other_comm.className = "div-other-comments";
+                        div_other_comm.style.border = '2px solid black';
                         document.getElementById("comment_area/"+userId).appendChild(div_other_comm);
                         var p_text  = "<p class = \"bg-primary text_box_comments\">"+user_comments+"</p>";
                         document.getElementById(div_other_comm.id).innerHTML += p_text;
+                        var info = "<p id = \"info-"+i+"-"+j+"\" class =\" bg-danger text_box_comments\"></p>";
+                        document.getElementById(div_other_comm.id).innerHTML += info;
+                        var all_info = "<h4 class=\"icon-adult\">&nbsp;"+user_name+"</h4><h4 class=\"icon-calendar-sign\">&nbsp;"+user_date+"</h4><h4 class=\"icon-map-marker-alt\">&nbsp;"+user_location+"</h4>";
+                        $('p#info-'+i+"-"+j).html(all_info);
                       }
                     },
                     error: function(){
@@ -306,7 +319,7 @@ function get_form_data(indicate, input_value)
     if (isNumber(user_id))
     {
       $.ajax({
-        url: ('http://api.nytimes.com/svc/community/v2/comments/user/id/'+user_id+'.jsonp?api-key=71b688b6fcaffe9ac59413b1d7de1a0c:1:70151851'),
+        url: ('http://api.nytimes.com/svc/community/v2/comments/user/id/'+user_id+'.jsonp?api-key=#'),
         dataType: 'jsonp',
         type: 'GET',
         cache:false,
@@ -481,7 +494,7 @@ function get_form_data(indicate, input_value)
       console.log(url);
 
       $.ajax({
-        url: ('http://api.nytimes.com/svc/community/v2/comments/url/exact-match.jsonp?url='+url+'&&api-key=71b688b6fcaffe9ac59413b1d7de1a0c:1:70151851'),
+        url: ('http://api.nytimes.com/svc/community/v2/comments/url/exact-match.jsonp?url='+url+'&&api-key=#'),
         dataType: 'jsonp',
         type: 'GET',
         cache:false,
@@ -645,7 +658,7 @@ function get_form_data(indicate, input_value)
               console.log(userId);
               $.ajax({
                 type:'GET',
-                url: 'http://api.nytimes.com/svc/community/v2/comments/user/id/'+userId+'.jsonp?api-key=71b688b6fcaffe9ac59413b1d7de1a0c:1:70151851',
+                url: 'http://api.nytimes.com/svc/community/v2/comments/user/id/'+userId+'.jsonp?api-key=#',
                 cache: false,
                 async: false,
                 dataType: 'jsonp',
@@ -653,13 +666,26 @@ function get_form_data(indicate, input_value)
                   var objects = data.results.comments;
                   for (var j = 0; j < objects.length; j++){
                     var user_comments = objects[j]['commentBody'];
+                    var user_name = objects[j]['display_name'];
+                    var user_location = objects[j]['location'];
+                    var u_dateTime = new Date(objects[j]['approveDate']*1000);
+                    var u_day = u_dateTime.getDate();
+                    var u_month = u_dateTime.getMonth();
+                    var u_year = u_dateTime.getFullYear();
+
+                    var user_date = u_month+"/"+u_day+"/"+u_year;
 
                     var div_other_comm = document.createElement("div");
-                    div_other_comm.id = "div_other_comments/"+i+"/"+j;
+                    div_other_comm.id = "div_other_comments/"+userId+"/"+j;
                     div_other_comm.className = "div-other-comments";
+                    div_other_comm.style.border = '2px solid black';
                     document.getElementById("comment_area/"+userId).appendChild(div_other_comm);
                     var p_text  = "<p class = \"bg-primary text_box_comments\">"+user_comments+"</p>";
                     document.getElementById(div_other_comm.id).innerHTML += p_text;
+                    var info = "<p id = \"info-"+i+"-"+j+"\" class =\" bg-danger text_box_comments\"></p>";
+                    document.getElementById(div_other_comm.id).innerHTML += info;
+                    var all_info = "<h4 class=\"icon-adult\">&nbsp;"+user_name+"</h4><h4 class=\"icon-calendar-sign\">&nbsp;"+user_date+"</h4><h4 class=\"icon-map-marker-alt\">&nbsp;"+user_location+"</h4>";
+                    $('p#info-'+i+"-"+j).html(all_info);
                   }
                 },
                 error: function(){
