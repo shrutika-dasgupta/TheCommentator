@@ -1,10 +1,5 @@
-User Interface Design: Assignement 3
-____________________________________________________________
-Name: Shrutika Dasgupta
-UNI: sd2841
-Email: sd2841@columbia.edu
-____________________________________________________________
-
+The Commentator
+___________________
 Special Instructions to run the Program:
 ----------------------------------------
 
